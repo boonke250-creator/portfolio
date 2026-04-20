@@ -1,4 +1,4 @@
-# Gilbert Iradukunda - Electronics Engineer Portfolio
+# Gilbert IRADUKUNDA - Electronics Engineer Portfolio
 
 A beautiful, responsive portfolio website showcasing electronics engineering skills and experience.
 
