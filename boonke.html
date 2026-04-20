@@ -291,27 +291,6 @@ nav{
 /* FOOTER */
 footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1px solid rgba(0,212,255,0.1);z-index:2;position:relative;}
 .social-link{color:var(--accent);text-decoration:none;margin:0 12px;font-size:14px;vertical-align:middle;}
-
-/* ══════════════════════════════
-   ADMIN DASHBOARD STYLES
-══════════════════════════════ */
-.admin-panel{
-  position:fixed;top:0;left:0;width:100%;height:100%;
-  background:rgba(2,13,26,0.95);backdrop-filter:blur(20px);
-  z-index:1000;display:flex;flex-direction:column;
-  padding:20px;
-}
-.admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
-.admin-title{color:var(--accent);font-size:24px;}
-.admin-close{background:var(--accent);color:black;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;}
-.admin-content{flex:1;overflow-y:auto;}
-.admin-section{margin-bottom:30px;}
-.admin-section h3{color:var(--text);margin-bottom:10px;}
-.admin-btn{background:var(--mid);color:var(--text);border:1px solid var(--accent);padding:8px 16px;border-radius:8px;cursor:pointer;margin:5px;}
-.admin-btn:hover{background:var(--accent);color:black;}
-.edit-mode [contenteditable]{border:1px dashed var(--accent);padding:5px;}
-.edit-mode .add-btn,.edit-mode .remove-btn{display:inline-block;}
-.add-btn,.remove-btn{display:none;}
 </style>
 </head>
 <body>
@@ -349,9 +328,9 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
   <!-- HERO -->
   <section id="hero" style="padding-top:120px;">
     <div class="hero-tag"><span class="drop-water"></span> Electronics Engineer · Kigali, Rwanda</div>
-    <h1 class="hero-name" data-editable><em>Gilbert</em><br>Iradukunda</h1>
-    <p class="hero-sub" data-editable>Designing the future, one circuit at a time.</p>
-    <p class="hero-bio" data-editable>Experienced electronics engineer with a passion for designing, developing, and testing electronic systems. I bring innovative solutions to telecommunications, security, and healthcare challenges.</p>
+    <h1 class="hero-name"><em>Gilbert</em><br>Iradukunda</h1>
+    <p class="hero-sub">Designing the future, one circuit at a time.</p>
+    <p class="hero-bio">Experienced electronics engineer with a passion for designing, developing, and testing electronic systems. I bring innovative solutions to telecommunications, security, and healthcare challenges.</p>
     <div class="hero-actions">
       <a href="#contact" class="hero-button primary">Hire Me</a>
       <a href="#about" class="hero-button secondary">Explore My Work</a>
@@ -380,10 +359,10 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
   <section id="about">
     <div class="section-header"><div class="label">At a Glance</div><h2 class="title">By the Numbers</h2></div>
     <div class="stats-grid">
-      <div class="stat-card glass stat-card"><div class="stat-n" data-editable>1+</div><div class="stat-l" data-editable>Year Experience</div></div>
-      <div class="stat-card glass stat-card"><div class="stat-n" data-editable>5+</div><div class="stat-l" data-editable>Specialties</div></div>
-      <div class="stat-card glass stat-card"><div class="stat-n" data-editable>2</div><div class="stat-l" data-editable>Languages</div></div>
-      <div class="stat-card glass stat-card"><div class="stat-n" data-editable>6+</div><div class="stat-l" data-editable>Core Skills</div></div>
+      <div class="stat-card glass stat-card"><div class="stat-n">1+</div><div class="stat-l">Year Experience</div></div>
+      <div class="stat-card glass stat-card"><div class="stat-n">5+</div><div class="stat-l">Specialties</div></div>
+      <div class="stat-card glass stat-card"><div class="stat-n">2</div><div class="stat-l">Languages</div></div>
+      <div class="stat-card glass stat-card"><div class="stat-n">6+</div><div class="stat-l">Core Skills</div></div>
     </div>
   </section>
 
@@ -396,19 +375,19 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
         <div class="glass ecard" style="padding:32px;">
           <div class="cred-row">
             <div>
-              <div class="erole" data-editable>Electronics Technician</div>
-              <div class="ecompany" data-editable>Improved Hub</div>
+              <div class="erole">Electronics Technician</div>
+              <div class="ecompany">Improved Hub</div>
             </div>
-            <div class="edate-badge" data-editable>May 2022 – May 2023</div>
+            <div class="edate-badge">May 2022 – May 2023</div>
           </div>
-          <ul class="tasks-list" data-editable>
+          <ul class="tasks-list">
             <li>CCTV Camera System Installation &amp; Repair</li>
             <li>Electronic Security System Technician</li>
             <li>Handheld Metal Detector Repair</li>
             <li>Fire Detector System Installation &amp; Repair</li>
             <li>Door Lock System Installation &amp; Repair</li>
           </ul>
-          <div style="margin-top:16px;font-size:13px;color:var(--muted);" data-editable>Supervisor: Munyarugamba Eric · +250 788 569 255</div>
+          <div style="margin-top:16px;font-size:13px;color:var(--muted);">Supervisor: Munyarugamba Eric · +250 788 569 255</div>
         </div>
       </div>
     </div>
@@ -418,12 +397,12 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
   <section id="skills">
     <div class="section-header"><div class="label">Expertise</div><h2 class="title">Technical Skills</h2></div>
     <div class="skills-grid">
-      <div class="skill-pill glass"><span class="skill-icon">⚡</span><span class="skill-name" data-editable>Electronics Design</span></div>
-      <div class="skill-pill glass"><span class="skill-icon">🔒</span><span class="skill-name" data-editable>Security Systems</span></div>
-      <div class="skill-pill glass"><span class="skill-icon">💬</span><span class="skill-name" data-editable>Communication</span></div>
-      <div class="skill-pill glass"><span class="skill-icon">📈</span><span class="skill-name" data-editable>Marketing</span></div>
-      <div class="skill-pill glass"><span class="skill-icon">💻</span><span class="skill-name" data-editable>Coding</span></div>
-      <div class="skill-pill glass"><span class="skill-icon">🎨</span><span class="skill-name" data-editable>Fine Arts</span></div>
+      <div class="skill-pill glass"><span class="skill-icon">⚡</span><span class="skill-name">Electronics Design</span></div>
+      <div class="skill-pill glass"><span class="skill-icon">🔒</span><span class="skill-name">Security Systems</span></div>
+      <div class="skill-pill glass"><span class="skill-icon">💬</span><span class="skill-name">Communication</span></div>
+      <div class="skill-pill glass"><span class="skill-icon">📈</span><span class="skill-name">Marketing</span></div>
+      <div class="skill-pill glass"><span class="skill-icon">💻</span><span class="skill-name">Coding</span></div>
+      <div class="skill-pill glass"><span class="skill-icon">🎨</span><span class="skill-name">Fine Arts</span></div>
     </div>
   </section>
 
@@ -434,10 +413,10 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
     <div class="glass content-block" style="padding:32px;">
       <div class="cred-row">
         <div>
-          <div class="cred-title" data-editable>Electronics and Services</div>
-          <div class="cred-sub" data-editable>St Joseph Le Travailleur Secondary School</div>
+          <div class="cred-title">Electronics and Services</div>
+          <div class="cred-sub">St Joseph Le Travailleur Secondary School</div>
         </div>
-        <div class="cred-date" data-editable>Feb 2021 – Aug 2023</div>
+        <div class="cred-date">Feb 2021 – Aug 2023</div>
       </div>
       <div style="margin-top:16px;font-size:13px;color:var(--muted);margin-bottom:8px;">Key Coursework:</div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;">
@@ -465,13 +444,13 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
   <!-- LANGUAGES -->
   <section>
     <div class="section-header"><div class="label">Global</div><h2 class="title">Languages</h2></div>
-    <div class="lang-card glass" style="padding:24px;">
+    <div class="lan-card glass" style="padding:24px;">
       <div class="lang-row">
-        <div class="lang-name"><span data-editable>Kinyarwanda</span><span data-editable>Native</span></div>
+        <div class="lang-name"><span>Kinyarwanda</span><span>Native</span></div>
         <div class="progress-bar"><div class="progress-fill" style="width:100%;"></div></div>
       </div>
       <div class="lang-row">
-        <div class="lang-name"><span data-editable>English</span><span data-editable>Professional</span></div>
+        <div class="lang-name"><span>English</span><span>Professional</span></div>
         <div class="progress-bar"><div class="progress-fill" style="width:75%;"></div></div>
       </div>
     </div>
@@ -498,48 +477,6 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
     </a>
   </section>
 </main>
-
-<!-- ADMIN PANEL -->
-<div id="adminPanel" class="admin-panel" style="display:none;">
-  <div class="admin-header">
-    <h2 class="admin-title">Admin Dashboard</h2>
-    <button class="admin-close" onclick="closeAdmin()">Close</button>
-  </div>
-  <div class="admin-content">
-    <div class="admin-section">
-      <h3>Hero Section</h3>
-      <button class="admin-btn" onclick="editSection('hero')">Edit Hero</button>
-    </div>
-    <div class="admin-section">
-      <h3>About / Stats</h3>
-      <button class="admin-btn" onclick="editStats()">Edit Stats</button>
-    </div>
-    <div class="admin-section">
-      <h3>Experience</h3>
-      <button class="admin-btn" onclick="editExperience()">Edit Experience</button>
-      <button class="admin-btn" onclick="addExperience()">Add Experience</button>
-    </div>
-    <div class="admin-section">
-      <h3>Skills</h3>
-      <button class="admin-btn" onclick="editSkills()">Edit Skills</button>
-      <button class="admin-btn" onclick="addSkill()">Add Skill</button>
-    </div>
-    <div class="admin-section">
-      <h3>Education</h3>
-      <button class="admin-btn" onclick="editEducation()">Edit Education</button>
-    </div>
-    <div class="admin-section">
-      <h3>Languages</h3>
-      <button class="admin-btn" onclick="editLanguages()">Edit Languages</button>
-      <button class="admin-btn" onclick="addLanguage()">Add Language</button>
-    </div>
-    <div class="admin-section">
-      <h3>Save Changes</h3>
-      <button class="admin-btn" onclick="saveChanges()">Save All Changes</button>
-      <button class="admin-btn" onclick="loadData()">Load Saved Data</button>
-    </div>
-  </div>
-</div>
 
 <footer>
   Crafted with Flow · <strong>Gilbert Iradukunda</strong> · Kigali, Rwanda
@@ -690,310 +627,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 document.querySelectorAll('section').forEach(sec => observer.observe(sec));
-
-// Admin functionality
-let isAdmin = false;
-
-function checkAdminRoute(){
-  if(window.location.hash === '#admin'){
-    const password = prompt('Enter admin password:');
-    if(password === 'admin123'){ // Change this to your desired password
-      showAdmin();
-    } else {
-      alert('Incorrect password');
-      window.location.hash = '';
-    }
-  } else {
-    closeAdmin();
-  }
-}
-
-window.addEventListener('hashchange', checkAdminRoute);
-checkAdminRoute(); // Check on load
-
-// Keyboard shortcut for admin (Ctrl+Shift+A to avoid conflict with Select All)
-document.addEventListener('keydown', (e) => {
-  if(e.ctrlKey && e.shiftKey && e.key === 'A'){
-    e.preventDefault();
-    window.location.hash = '#admin';
-  }
-});
-
-function showAdmin(){
-  document.getElementById('adminPanel').style.display = 'flex';
-  document.body.classList.add('edit-mode');
-  isAdmin = true;
-}
-
-function closeAdmin(){
-  document.getElementById('adminPanel').style.display = 'none';
-  document.body.classList.remove('edit-mode');
-  window.location.hash = '';
-  isAdmin = false;
-}
-
-function editSection(sectionId){
-  const section = document.getElementById(sectionId);
-  const editables = section.querySelectorAll('[data-editable]');
-  editables.forEach(el => el.contentEditable = 'true');
-}
-
-function editStats(){
-  const stats = document.querySelectorAll('.stat-n, .stat-l');
-  stats.forEach(stat => stat.contentEditable = 'true');
-}
-
-function editExperience(){
-  const experiences = document.querySelectorAll('.t-item');
-  experiences.forEach(exp => {
-    exp.querySelectorAll('[data-editable]').forEach(el => el.contentEditable = 'true');
-    // Add remove button inside ecard
-    const ecard = exp.querySelector('.ecard');
-    if(ecard && !exp.querySelector('.remove-btn')){
-      const removeBtn = document.createElement('button');
-      removeBtn.className = 'admin-btn remove-btn';
-      removeBtn.textContent = 'Remove';
-      removeBtn.onclick = () => exp.remove();
-      ecard.appendChild(removeBtn);
-    }
-  });
-}
-
-function addExperience(){
-  const timeline = document.querySelector('.timeline');
-  const newItem = document.createElement('div');
-  newItem.className = 't-item';
-  newItem.innerHTML = `
-    <div class="t-dot"></div>
-    <div class="glass ecard" style="padding:32px;">
-      <div class="cred-row">
-        <div>
-          <div class="erole" data-editable contenteditable="true">New Role</div>
-          <div class="ecompany" data-editable contenteditable="true">Company Name</div>
-        </div>
-        <div class="edate-badge" data-editable contenteditable="true">Date</div>
-      </div>
-      <ul class="tasks-list" data-editable contenteditable="true">
-        <li>Task 1</li>
-        <li>Task 2</li>
-      </ul>
-      <div style="margin-top:16px;font-size:13px;color:var(--muted);" data-editable contenteditable="true">Supervisor: Name · Phone</div>
-      <button class="admin-btn remove-btn" onclick="this.parentElement.parentElement.remove()">Remove</button>
-    </div>
-  `;
-  timeline.appendChild(newItem);
-}
-
-function editSkills(){
-  const skills = document.querySelectorAll('.skill-name');
-  skills.forEach(skill => skill.contentEditable = 'true');
-  // Add remove buttons
-  document.querySelectorAll('.skill-pill').forEach(pill => {
-    if(!pill.querySelector('.remove-btn')){
-      const removeBtn = document.createElement('button');
-      removeBtn.className = 'admin-btn remove-btn';
-      removeBtn.textContent = 'Remove';
-      removeBtn.onclick = () => pill.remove();
-      pill.appendChild(removeBtn);
-    }
-  });
-}
-
-function addSkill(){
-  const skillsGrid = document.querySelector('.skills-grid');
-  const newSkill = document.createElement('div');
-  newSkill.className = 'skill-pill glass';
-  newSkill.innerHTML = `
-    <span class="skill-icon">⚡</span>
-    <span class="skill-name" contenteditable="true">New Skill</span>
-    <button class="admin-btn remove-btn" onclick="this.parentElement.remove()">Remove</button>
-  `;
-  skillsGrid.appendChild(newSkill);
-}
-
-function editEducation(){
-  const education = document.querySelector('.content-block');
-  education.querySelectorAll('[data-editable]').forEach(el => el.contentEditable = 'true');
-}
-
-function editLanguages(){
-  const langs = document.querySelectorAll('.lang-name span:first-child, .lang-name span:last-child');
-  langs.forEach(lang => lang.contentEditable = 'true');
-  // Add remove buttons and range inputs
-  document.querySelectorAll('.lang-row').forEach(row => {
-    if(!row.querySelector('.remove-btn')){
-      const removeBtn = document.createElement('button');
-      removeBtn.className = 'admin-btn remove-btn';
-      removeBtn.textContent = 'Remove';
-      removeBtn.onclick = () => row.remove();
-      row.appendChild(removeBtn);
-    }
-    if(!row.querySelector('input[type="range"]')){
-      const range = document.createElement('input');
-      range.type = 'range';
-      range.min = '0';
-      range.max = '100';
-      const currentWidth = row.querySelector('.progress-fill').style.width || '100%';
-      range.value = parseInt(currentWidth);
-      range.onchange = function(){ this.previousElementSibling.firstElementChild.style.width = this.value + '%'; };
-      range.style.marginTop = '10px';
-      row.appendChild(range);
-    }
-  });
-}
-
-function addLanguage(){
-  const langCard = document.querySelector('.lang-card');
-  const newRow = document.createElement('div');
-  newRow.className = 'lang-row';
-  newRow.innerHTML = `
-    <div class="lang-name"><span contenteditable="true">New Language</span><span contenteditable="true">Level</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:50%;"></div></div>
-    <input type="range" min="0" max="100" value="50" onchange="this.previousElementSibling.firstElementChild.style.width = this.value + '%';" style="margin-top:10px;">
-    <button class="admin-btn remove-btn" onclick="this.parentElement.remove()">Remove</button>
-  `;
-  langCard.appendChild(newRow);
-}
-
-function saveChanges(){
-  // Validate content
-  const heroName = document.querySelector('.hero-name');
-  if(!heroName.innerHTML.trim()){
-    alert('Hero name cannot be empty!');
-    return;
-  }
-
-  const data = {
-    hero: {
-      name: heroName.innerHTML,
-      sub: document.querySelector('.hero-sub').innerHTML,
-      bio: document.querySelector('.hero-bio').innerHTML
-    },
-    stats: Array.from(document.querySelectorAll('.stat-card')).map(card => ({
-      number: card.querySelector('.stat-n').innerHTML,
-      label: card.querySelector('.stat-l').innerHTML
-    })),
-    experience: Array.from(document.querySelectorAll('.t-item')).map(item => ({
-      role: item.querySelector('.erole').innerHTML,
-      company: item.querySelector('.ecompany').innerHTML,
-      date: item.querySelector('.edate-badge').innerHTML,
-      tasks: item.querySelector('.tasks-list').innerHTML,
-      supervisor: item.querySelector('div[style*="margin-top:16px"]').innerHTML
-    })),
-    skills: Array.from(document.querySelectorAll('.skill-pill')).map(pill => ({
-      icon: pill.querySelector('.skill-icon').innerHTML,
-      name: pill.querySelector('.skill-name').innerHTML
-    })),
-    education: {
-      title: document.querySelector('.cred-title').innerHTML,
-      sub: document.querySelector('.cred-sub').innerHTML,
-      date: document.querySelector('.cred-date').innerHTML,
-      coursework: Array.from(document.querySelectorAll('.credit-tag')).map(tag => tag.innerHTML)
-    },
-    languages: Array.from(document.querySelectorAll('.lang-row')).map(row => ({
-      name: row.querySelector('.lang-name span:first-child').innerHTML,
-      level: row.querySelector('.lang-name span:last-child').innerHTML,
-      progress: row.querySelector('.progress-fill').style.width
-    }))
-  };
-  localStorage.setItem('portfolioData', JSON.stringify(data));
-  alert('Changes saved!');
-}
-
-function loadData(){
-  const data = JSON.parse(localStorage.getItem('portfolioData'));
-  if(!data) {
-    alert('No saved data found');
-    return;
-  }
-  
-  // Load hero
-  document.querySelector('.hero-name').innerHTML = data.hero.name;
-  document.querySelector('.hero-sub').innerHTML = data.hero.sub;
-  document.querySelector('.hero-bio').innerHTML = data.hero.bio;
-  
-  // Load stats
-  const statCards = document.querySelectorAll('.stat-card');
-  data.stats.forEach((stat, i) => {
-    if(statCards[i]){
-      statCards[i].querySelector('.stat-n').innerHTML = stat.number;
-      statCards[i].querySelector('.stat-l').innerHTML = stat.label;
-    }
-  });
-  
-  // Load experience
-  const timeline = document.querySelector('.timeline');
-  timeline.innerHTML = '';
-  data.experience.forEach(exp => {
-    const item = document.createElement('div');
-    item.className = 't-item';
-    item.innerHTML = `
-      <div class="t-dot"></div>
-      <div class="glass ecard" style="padding:32px;">
-        <div class="cred-row">
-          <div>
-            <div class="erole">${exp.role}</div>
-            <div class="ecompany">${exp.company}</div>
-          </div>
-          <div class="edate-badge">${exp.date}</div>
-        </div>
-        <ul class="tasks-list">${exp.tasks}</ul>
-        <div style="margin-top:16px;font-size:13px;color:var(--muted);">${exp.supervisor}</div>
-      </div>
-    `;
-    timeline.appendChild(item);
-  });
-  
-  // Load skills
-  const skillsGrid = document.querySelector('.skills-grid');
-  skillsGrid.innerHTML = '';
-  data.skills.forEach(skill => {
-    const pill = document.createElement('div');
-    pill.className = 'skill-pill glass';
-    pill.innerHTML = `<span class="skill-icon">${skill.icon}</span><span class="skill-name">${skill.name}</span>`;
-    skillsGrid.appendChild(pill);
-  });
-  
-  // Load education
-  document.querySelector('.cred-title').innerHTML = data.education.title;
-  document.querySelector('.cred-sub').innerHTML = data.education.sub;
-  document.querySelector('.cred-date').innerHTML = data.education.date;
-  const courseworkDiv = document.querySelector('.content-block div[style*="display:flex"]');
-  courseworkDiv.innerHTML = '';
-  data.education.coursework.forEach(course => {
-    const tag = document.createElement('span');
-    tag.className = 'credit-tag';
-    tag.style.cssText = 'padding:6px 14px;background:rgba(0,242,255,0.05);border-radius:20px;font-size:12px;';
-    tag.innerHTML = course;
-    courseworkDiv.appendChild(tag);
-  });
-  
-  // Load languages
-  const langCard = document.querySelector('.lang-card');
-  langCard.innerHTML = '';
-  data.languages.forEach(lang => {
-    const row = document.createElement('div');
-    row.className = 'lang-row';
-    row.innerHTML = `
-      <div class="lang-name"><span>${lang.name}</span><span>${lang.level}</span></div>
-      <div class="progress-bar"><div class="progress-fill" style="width:${lang.progress};"></div></div>
-    `;
-    langCard.appendChild(row);
-  });
-  
-  alert('Data loaded!');
-}
-
-// Add data-editable attributes to key elements
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.hero-name').setAttribute('data-editable', 'true');
-  document.querySelector('.hero-sub').setAttribute('data-editable', 'true');
-  document.querySelector('.hero-bio').setAttribute('data-editable', 'true');
-  document.querySelectorAll('.erole, .ecompany, .edate-badge, .tasks-list, div[style*="margin-top:16px"]').forEach(el => el.setAttribute('data-editable', 'true'));
-  document.querySelector('.cred-title').setAttribute('data-editable', 'true');
-  document.querySelector('.cred-sub').setAttribute('data-editable', 'true');
-  document.querySelector('.cred-date').setAttribute('data-editable', 'true');
-});
 
 </script>
 </body>
