@@ -1,22 +1,68 @@
-# Portfolio Admin Dashboard with Python Backend
+# Gilbert Iradukunda - Electronics Engineer Portfolio
 
-A secure portfolio management system with a Flask backend and beautiful UI.
+A beautiful, responsive portfolio website showcasing electronics engineering skills and experience.
 
-## Setup Instructions
+## Features
 
-### 1. Install Python Dependencies
+- 🎨 Modern water-themed design with interactive animations
+- 📱 Fully responsive layout
+- ⚡ Fast, static HTML/CSS/JavaScript
+- 🔒 Frontend-only (no backend required)
+- 🚀 Ready for deployment on Vercel, Netlify, or GitHub Pages
+
+## Tech Stack
+
+- **HTML5** - Semantic markup
+- **CSS3** - Custom properties, animations, and responsive design
+- **JavaScript** - Interactive water physics and smooth scrolling
+- **Google Fonts** - Cormorant Garamond & DM Sans
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the `vercel.json` configuration
+3. Your site will be live at `your-project.vercel.app`
+
+### GitHub Pages
+
+1. Go to your repository settings
+2. Enable GitHub Pages in the "Pages" section
+3. Select "Deploy from a branch" and choose `main`
+4. Your site will be live at `https://yourusername.github.io/repository-name`
+
+### Netlify
+
+1. Drag and drop the `index.html` file to Netlify's deploy area
+2. Or connect your GitHub repository
+3. Site will be live instantly
+
+## Local Development
+
+Open `index.html` directly in your browser or use a local server:
 
 ```bash
-pip install -r requirements.txt
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve .
+
+# Then visit http://localhost:8000
 ```
 
-### 2. Configure Environment
+## Customization
 
-Edit `.env` file to change the admin password:
+Edit `index.html` to update:
+- Personal information and bio
+- Skills and experience
+- Contact details
+- Colors and styling (modify CSS custom properties in `:root`)
 
-```env
-ADMIN_PASSWORD=your_secure_password_here
-```
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ### 3. Start the Flask Backend
 

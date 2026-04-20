@@ -1,8 +1,0 @@
-{
-  "buildCommand": "echo 'Frontend only'",
-  "outputDirectory": ".",
-  "installCommand": "echo 'No installation needed'",
-  "env": {
-    "REACT_APP_API_URL": "@api_url"
-  }
-}
