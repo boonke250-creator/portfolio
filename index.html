@@ -136,6 +136,30 @@ nav{
 .nav-links a:hover { color:var(--accent); }
 .nav-links a:hover::after { width:100%; }
 
+/* Hamburger Menu */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+.nav-toggle span {
+  width: 24px;
+  height: 3px;
+  background: var(--text);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
 /* ══════════════════════════════
    HERO
 ══════════════════════════════ */
@@ -333,10 +357,42 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
     font-size: 22px;
   }
   .nav-links {
-    gap: 16px;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(2,13,26,0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0,212,255,0.15);
+  }
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,212,255,0.1);
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
   }
   .nav-links a {
-    font-size: 12px;
+    font-size: 16px;
+    padding: 8px 20px;
+    display: block;
+  }
+  .nav-toggle {
+    display: flex;
   }
 
   #hero {
@@ -444,10 +500,42 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
     font-size: 20px;
   }
   .nav-links {
-    gap: 12px;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(2,13,26,0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0,212,255,0.15);
+  }
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,212,255,0.1);
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
   }
   .nav-links a {
-    font-size: 11px;
+    font-size: 16px;
+    padding: 8px 20px;
+    display: block;
+  }
+  .nav-toggle {
+    display: flex;
   }
 
   #hero {
@@ -595,10 +683,42 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
     font-size: 18px;
   }
   .nav-links {
-    gap: 8px;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(2,13,26,0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0,212,255,0.15);
+  }
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,212,255,0.1);
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
   }
   .nav-links a {
-    font-size: 10px;
+    font-size: 16px;
+    padding: 8px 20px;
+    display: block;
+  }
+  .nav-toggle {
+    display: flex;
   }
 
   .hero-name {
@@ -666,7 +786,12 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Gilbert.</div>
-  <ul class="nav-links">
+  <div class="nav-toggle" id="navToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -687,9 +812,9 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
       <a href="#about" class="hero-button secondary">Explore My Work</a>
     </div>
     <div class="hero-chips">
-      <a href="mailto:iradukundagilbert17@gmail.com" class="chip">
+      <a href="mailto:boonke250@gmail.com" class="chip">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        iradukundagilbert17@gmail.com
+        boonke250@gmail.com
       </a>
       <a href="https://wa.me/250788875199" target="_blank" rel="noreferrer" class="chip">
          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.63 19.79 19.79 0 01.22 4 2 2 0 012.18 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
@@ -981,6 +1106,31 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+/* ── HAMBURGER MENU ── */
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+navLinks.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    navToggle.classList.remove('active');
+    navLinks.classList.remove('active');
+  }
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    navToggle.classList.remove('active');
+    navLinks.classList.remove('active');
+  }
+});
 
 </script>
 </body>
