@@ -9,26 +9,26 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 
 :root{
-  --deep:#0a0e15;
-  --ocean:#0d1624;
-  --mid:#10203a;
-  --water-top:rgba(0,255,240,0.03);
-  --water-mid:rgba(0,255,240,0.05);
+  --deep:#2a2416;
+  --ocean:#3d3428;
+  --mid:#4a4238;
+  --water-top:rgba(255,200,0,0.03);
+  --water-mid:rgba(255,180,0,0.05);
   --foam:rgba(255,255,255,0.08);
-  --accent:#00ffff;
-  --text:rgba(255,255,255,0.95);
-  --muted:rgba(180,255,255,0.55);
-  --glow:0 0 30px rgba(0,255,240,0.08);
+  --accent:#d4af37;
+  --text:rgba(255,250,240,0.95);
+  --muted:rgba(200,170,120,0.75);
+  --glow:0 0 30px rgba(212,175,55,0.08);
 }
 
 html{
   scroll-behavior:smooth;
-  background:linear-gradient(135deg, #0a0e15 0%, #0d1f2d 50%, #0a0e15 100%);
+  background:linear-gradient(135deg, #3d3428 0%, #5a4a38 50%, #3d3428 100%);
   min-height:100%;
 }
 body{
   font-family:'DM Sans',sans-serif;
-  background:linear-gradient(180deg, #0a0e15 0%, #0d1f2d 50%, #0a0e15 100%);
+  background:linear-gradient(180deg, #4a4238 0%, #6b5844 50%, #4a4238 100%);
   background-attachment:fixed;
   color:var(--text);
   overflow-x:hidden;
@@ -40,9 +40,9 @@ body::before{
   content:'';
   position:fixed;
   inset:0;
-  background:radial-gradient(ellipse at 50% 0%, rgba(0,255,240,0.08), transparent 60%),
-             radial-gradient(ellipse at 0% 50%, rgba(0,200,255,0.05), transparent 50%),
-             radial-gradient(ellipse at 100% 50%, rgba(0,200,255,0.05), transparent 50%);
+  background:radial-gradient(ellipse at 50% 0%, rgba(255,200,0,0.08), transparent 60%),
+             radial-gradient(ellipse at 0% 50%, rgba(255,180,0,0.05), transparent 50%),
+             radial-gradient(ellipse at 100% 50%, rgba(255,180,0,0.05), transparent 50%);
   pointer-events:none;
   z-index:0;
 }
@@ -122,17 +122,17 @@ section{
 section.visible{opacity:1;transform:translateY(0);}
 
 .glass{
-  background:linear-gradient(135deg, rgba(0,255,240,0.02), rgba(0,200,255,0.01));
-  border:1px solid rgba(0,255,240,0.15);
+  background:linear-gradient(135deg, rgba(212,175,55,0.02), rgba(200,160,40,0.01));
+  border:1px solid rgba(212,175,55,0.15);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
   border-radius:24px;
-  box-shadow:var(--glow), inset 0 0 30px rgba(0,255,240,0.03);
+  box-shadow:var(--glow), inset 0 0 30px rgba(212,175,55,0.03);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .glass:hover{
   border-color:var(--accent);
-  box-shadow:0 0 40px rgba(0,255,240,0.15), inset 0 0 30px rgba(0,255,240,0.06);
+  box-shadow:0 0 40px rgba(212,175,55,0.15), inset 0 0 30px rgba(212,175,55,0.06);
   transform: translateY(-5px);
 }
 
@@ -143,10 +143,10 @@ nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
   padding:24px 44px;
-  background:rgba(10,14,21,0.5);
+  background:rgba(60,52,40,0.5);
   backdrop-filter:blur(30px);
   -webkit-backdrop-filter:blur(30px);
-  border-bottom:1px solid rgba(0,255,240,0.1);
+  border-bottom:1px solid rgba(212,175,55,0.1);
 }
 .nav-logo{
   font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;
@@ -195,8 +195,8 @@ nav{
 #hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:80px;overflow:hidden;}
 #hero::before{
   content:'';position:absolute;inset:0;
-  background: radial-gradient(circle at 20% 20%, rgba(0,255,240,0.08), transparent 25%),
-              radial-gradient(circle at 80% 80%, rgba(0,255,240,0.05), transparent 18%);
+  background: radial-gradient(circle at 20% 20%, rgba(212,175,55,0.08), transparent 25%),
+              radial-gradient(circle at 80% 80%, rgba(212,175,55,0.05), transparent 18%);
   pointer-events:none;z-index:1;
 }
 #hero > *{position:relative;z-index:2;}
@@ -228,7 +228,7 @@ nav{
 }
 .hero-button:hover{
   transform:translateY(-2px);
-  box-shadow:0 16px 32px rgba(0,255,240,0.12);
+  box-shadow:0 16px 32px rgba(212,175,55,0.12);
 }
 .scroll-indicator{
   position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
@@ -263,12 +263,12 @@ nav{
 .hero-chips{display:flex;flex-wrap:wrap;gap:16px;animation: fadeIn 1s 0.8s forwards;opacity:0;margin-bottom:100px;}
 .chip{
   display:flex;align-items:center;gap:10px;padding:12px 24px;border-radius:50px;
-  background:rgba(0,255,240,0.03);border:1px solid rgba(0,255,240,0.12);
+  background:rgba(212,175,55,0.03);border:1px solid rgba(212,175,55,0.12);
   backdrop-filter:blur(12px);font-size:14px;color:rgba(255,255,255,0.9);
   text-decoration:none;transition:all 0.3s;
 }
 .chip svg{stroke:var(--accent);}
-.chip:hover{background:rgba(0,255,240,0.1);border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.chip:hover{background:rgba(212,175,55,0.1);border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
 
 @keyframes fadeIn {from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
@@ -295,12 +295,12 @@ nav{
 .stat-l{font-size:14px;color:var(--muted);letter-spacing:1px;}
 
 /* TIMELINE */
-.timeline{position:relative;padding-left:44px;border-left:2px solid rgba(0,255,240,0.1);}
+.timeline{position:relative;padding-left:44px;border-left:2px solid rgba(212,175,55,0.1);}
 .t-item{margin-bottom:56px;position:relative;}
 .t-dot{
   position:absolute;left:-52px;top:4px;width:16px;height:16px;border-radius:50%;
   background:var(--deep);border:2px solid var(--accent);
-  box-shadow:0 0 0 4px rgba(0,255,240,0.08);z-index:5;
+  box-shadow:0 0 0 4px rgba(212,175,55,0.08);z-index:5;
 }
 .e-details{margin-bottom:8px;}
 .erole{font-size:22px;font-weight:600;margin-bottom:4px;}
@@ -339,10 +339,10 @@ nav{
 .lang-row{margin-bottom:16px;}
 .lang-name{font-weight:500;margin-bottom:6px;display:flex;justify-content:space-between;}
 .progress-bar{height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;}
-.progress-fill{height:100%;background:linear-gradient(90deg,rgba(0,255,240,0.5),var(--accent));width:0;transition:width 2s ease-out;}
+.progress-fill{height:100%;background:linear-gradient(90deg,rgba(212,175,55,0.5),var(--accent));width:0;transition:width 2s ease-out;}
 
 /* FOOTER */
-footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1px solid rgba(0,255,240,0.08);z-index:2;position:relative;background:rgba(10,14,21,0.5);margin-top:64px;}
+footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1px solid rgba(212,175,55,0.08);z-index:2;position:relative;background:rgba(60,52,40,0.5);margin-top:64px;}
 .social-link{color:var(--accent);text-decoration:none;margin:0 12px;font-size:14px;vertical-align:middle;}
 
 /* ══════════════════════════════
@@ -794,6 +794,11 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
 </head>
 <body>
 
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop style="display:none;">
+  <source src="path/to/your/background-music.mp3" type="audio/mpeg">
+</audio>
+
 <!-- Layered Visuals -->
 <canvas id="waterCanvas"></canvas>
 <div class="bubbles-container" id="bubbles"></div>
@@ -804,7 +809,7 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
   <!-- Wave 1 -->
    
   <svg class="wave-svg wave-layer-1" preserveAspectRatio="none" viewBox="0 0 1440 320">
-    <path fill="rgba(0,255,240,0.15)" d="M0,160L48,154.7C96,149,192,139,288,144C384,149,480,171,576,186.7C672,203,768,213,864,202.7C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    <path fill="rgba(212,175,55,0.15)" d="M0,160L48,154.7C96,149,192,139,288,144C384,149,480,171,576,186.7C672,203,768,213,864,202.7C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
   </svg>
   <!-- Wave 2 -->
   <svg class="wave-svg wave-layer-2" style="bottom:-20px;" preserveAspectRatio="none" viewBox="0 0 1440 320">
@@ -920,10 +925,10 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
       </div>
       <div style="margin-top:16px;font-size:13px;color:var(--muted);margin-bottom:8px;">Key Coursework:</div>
       <div style="display:flex;flex-wrap:wrap;gap:8px;">
-        <span class="credit-tag" style="padding:6px 14px;background:rgba(0,255,240,0.03);border:1px solid rgba(0,255,240,0.1);border-radius:20px;font-size:12px;">Basics of Electronics</span>
-        <span class="credit-tag" style="padding:6px 14px;background:rgba(0,255,240,0.03);border:1px solid rgba(0,255,240,0.1);border-radius:20px;font-size:12px;">Microcontrollers</span>
-        <span class="credit-tag" style="padding:6px 14px;background:rgba(0,255,240,0.03);border:1px solid rgba(0,255,240,0.1);border-radius:20px;font-size:12px;">Fire Detection</span>
-        <span class="credit-tag" style="padding:6px 14px;background:rgba(0,255,240,0.03);border:1px solid rgba(0,255,240,0.1);border-radius:20px;font-size:12px;">Display Systems</span>
+        <span class="credit-tag" style="padding:6px 14px;background:rgba(212,175,55,0.03);border:1px solid rgba(212,175,55,0.1);border-radius:20px;font-size:12px;">Basics of Electronics</span>
+        <span class="credit-tag" style="padding:6px 14px;background:rgba(212,175,55,0.03);border:1px solid rgba(212,175,55,0.1);border-radius:20px;font-size:12px;">Microcontrollers</span>
+        <span class="credit-tag" style="padding:6px 14px;background:rgba(212,175,55,0.03);border:1px solid rgba(212,175,55,0.1);border-radius:20px;font-size:12px;">Fire Detection</span>
+        <span class="credit-tag" style="padding:6px 14px;background:rgba(212,175,55,0.03);border:1px solid rgba(212,175,55,0.1);border-radius:20px;font-size:12px;">Display Systems</span>
       </div>
     </div>
   </section>
@@ -932,7 +937,7 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
   <section>
     <div class="section-header"><div class="label">Credentials</div><h2 class="title">Certifications</h2></div>
     <div class="glass" style="padding:32px;display:flex;align-items:center;gap:24px;">
-      <div style="width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,rgba(0,255,240,0.1),transparent);display:flex;align-items:center;justify-content:center;font-size:30px;">🏅</div>
+      <div style="width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,rgba(212,175,55,0.1),transparent);display:flex;align-items:center;justify-content:center;font-size:30px;">🏅</div>
       <div>
         <div class="cred-title">Certificate of Completion</div>
         <div class="cred-sub">Improved Hub — Electronic Services</div>
