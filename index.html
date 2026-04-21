@@ -28,13 +28,20 @@ html{
 }
 body{
   font-family:'DM Sans',sans-serif;
-  background:linear-gradient(180deg, #4a4238 0%, #6b5844 50%, #4a4238 100%);
+  background-image:url('backgrounds/How To Find Sand Dollars At The Beach - Sciencing.jpg');
+  background-size:cover;
+  background-position:center;
   background-attachment:fixed;
+  background-color:#4a4238;
   color:var(--text);
   overflow-x:hidden;
   -webkit-font-smoothing: antialiased;
   min-height:100vh;
   position:relative;
+}
+/* Fallback gradient if image doesn't load */
+body.no-bg-image{
+  background-image:linear-gradient(180deg, #4a4238 0%, #6b5844 50%, #4a4238 100%);
 }
 body::before{
   content:'';
@@ -796,7 +803,8 @@ footer{text-align:center;padding:80px 20px 40px;color:var(--muted);border-top:1p
 
 <!-- Background Music -->
 <audio id="bgMusic" autoplay loop style="display:none;">
-  <source src="path/to/your/background-music.mp3" type="audio/mpeg">
+  <source src="backgrounds/background music_iradukundagilbert17@gmail.com.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 
 <!-- Layered Visuals -->
@@ -1157,6 +1165,28 @@ document.addEventListener('click', (e) => {
     navLinks.classList.remove('active');
   }
 });
+
+// Handle background image loading
+window.addEventListener('load', () => {
+  const bgImg = new Image();
+  bgImg.onload = () => {
+    document.body.classList.remove('no-bg-image');
+  };
+  bgImg.onerror = () => {
+    document.body.classList.add('no-bg-image');
+    console.warn('Background image not found. Using fallback gradient.');
+  };
+  bgImg.src = 'backgrounds/How To Find Sand Dollars At The Beach - Sciencing.jpg';
+});
+
+// Check if audio plays on load
+const bgMusic = document.getElementById('bgMusic');
+if (bgMusic) {
+  bgMusic.volume = 0.3; // Set volume to 30% to not startle visitors
+  bgMusic.play().catch(() => {
+    console.log('Audio autoplay blocked - visitor may need to interact with page first');
+  });
+}
 
 </script>
 </body>
